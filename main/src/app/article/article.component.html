@@ -1,0 +1,15 @@
+<div id="divide-container">
+    <div class="left divide scrollable">
+        <h1>{{article.title}}</h1>
+        <div>
+            <p class="article-description scrollable">{{article.description}}</p>
+        </div>
+        <h2>What we did</h2>
+        <ul>
+            <li *ngFor="let method of article.methods">{{method}}</li>
+        </ul>
+    </div>
+    <div class="right divide scrollable">
+        <img *ngFor="let image of article.images" [src]="getImgAddress(image)">
+    </div>
+</div>

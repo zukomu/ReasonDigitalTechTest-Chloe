@@ -1,0 +1,30 @@
+<div class="top-container">
+    <div class="page-description">
+        <h1>Portfolio</h1>
+        <p>My everyday work is presented here</p>
+        <p>For more check out my portfolio on Behance</p>
+    </div>
+    <div class="filter-options">
+        <button [class.active]="currentFilter == -1" (click)="filter(-1)">All</button>
+        <button [class.active]="currentFilter == 0" (click)="filter(0)">{{articleType[0]}}</button>
+        <button [class.active]="currentFilter == 1" (click)="filter(1)">{{articleType[1]}}</button>
+        <button [class.active]="currentFilter == 2" (click)="filter(2)">{{articleType[2]}}</button>
+        <button [class.active]="currentFilter == 3" (click)="filter(3)">{{articleType[3]}}</button>
+    </div>
+</div>
+<div class="article-container">
+    <div *ngFor="let article of articles">
+        <a [href]="'/article/'  + article.id">
+            <div class="article">
+                <img class="article-image" [src]="getImgAddress(article.images[0])">
+                <h2>{{article.title}}</h2>
+                <span>{{articleType[article.type]}}</span>
+            </div>
+        </a>
+
+    </div>
+    <div *ngIf="articles.length == 0">
+        <h1>Filter returned 0 results</h1>
+    </div>
+</div>
+

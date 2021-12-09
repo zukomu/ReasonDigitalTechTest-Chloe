@@ -1,0 +1,26 @@
+.router-outlet{
+    width: 100%;
+    top: 80px;
+    height: 100%;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+.toolbar{
+    flex: 0 0 auto;
+    position: absolute;
+}
+.content{
+    position: absolute;
+    height: calc(100vh - 40px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 20px solid #dfdfdf;
+    width: calc(100vw - 40px);
+}

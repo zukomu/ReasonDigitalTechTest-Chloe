@@ -1,0 +1,23 @@
+.toolbar-container{
+    display: flex;
+    padding: 100px 15vw 0;
+    width: calc(100vw - 30vw);
+}
+@media screen and (max-height: 600px){
+    .toolbar-container{
+        padding-top: 50px;
+    }
+}
+.image-container{
+    margin-right: auto;
+    img{
+        height: 50px;
+    }
+} 
+.burger-container{
+    float: right;
+    fa-icon{
+        font-size: 35px;
+        cursor: pointer;
+    }
+}

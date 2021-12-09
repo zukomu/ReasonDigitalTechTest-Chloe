@@ -1,0 +1,41 @@
+@mixin defaultText{
+    font-family: "Century Gothic", Century, sans-serif;
+    color: #585660; 
+}
+body, a{
+    @include defaultText()
+}
+
+h1, h2, h3{
+    font-weight: normal !important;
+}
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  .scrollable {
+    scrollbar-width: auto;
+    scrollbar-color: #ababab80 #ffffff;
+    transition: scrollbar-color 0.2s ease-in;
+  }
+
+  /* Chrome, Edge, and Safari */
+  .scrollable::-webkit-scrollbar {
+    width: 13px;
+  }
+
+  .scrollable::-webkit-scrollbar-track {
+    background: #ffffff00;
+  }
+
+  .scrollable::-webkit-scrollbar-thumb {
+    background-color: #ababab80;
+    border-radius: 6px;
+    border: 0px solid #ffffff;
+    transition: background-color 0.2s ease-in;
+  }
+
+  .scrollable:hover {
+    scrollbar-color: #74747480 #ffffff;
+  }
+  .scrollable::-webkit-scrollbar-thumb:hover {
+    background-color: #74747480;
+  }
